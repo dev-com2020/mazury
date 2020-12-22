@@ -8,7 +8,7 @@ module.exports = {
   },
 
   plugins: [
-   /* {
+    {
       resolve: `gatsby-plugin-manifest`,
       options:{
         name: `Mazury`,
@@ -17,9 +17,9 @@ module.exports = {
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
         display: `standalone`,
-       // icon: `src/images/icon.png`,
+        icon: `src/images/icon.png`,
         },
-        }, */
+        },
     {
       resolve: `gatsby-source-filesystem`,
       options:{
@@ -29,7 +29,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-offline`,

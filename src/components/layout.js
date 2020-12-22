@@ -1,8 +1,15 @@
-import React from "react"
+import React,{useState, useEffect} from "react"
 import { css } from "@emotion/core"
 import { Link } from "gatsby"
 import { rhythm } from "../utils/typography"
+import Footer from "./Footer/Footer"
+import Navigation from "./Navbar/NavbarDesktop/NavbarDesktop"
+import MobileNavigation from "./Navbar/NavbarMobile/NavbarMobile"
 import { useStaticQuery, graphql } from "gatsby"
+import GlobalStyle from "../assets/styles/globalStyles"
+
+
+
 
 export default ({ children }) =>{
     const data = useStaticQuery(
@@ -15,30 +22,25 @@ export default ({ children }) =>{
             }
         }`
     )
+    const [isMobile,setIsMobile] = useState(false);
+    useEffect(()=>{
+        if (window.innerWidth<1033) setIsMobile(true);
+        function handleResize(){
+            if (window.innerWidth<1033) setIsMobile(true);
+            else setIsMobile(false);
+        }
+        window.addEventListener("resize",handleResize);
+    })
 return (
-    <div 
-    css={css`
-    margin: 0 auto;
-    max-width: 700px;
-    padding: ${rhythm(2)};
-    padding-top: ${rhythm(1.5)};
-    `}
-    >
-    <Link to={`/`}>
-        <h3
-        css={css`
-        margin-bottom: ${rhythm(2)};
-        display: inline-block;
-        font-style: normal;
-    `}
-    >{data.site.siteMetadata.title}
-    </h3>
-    </Link>
-    <Link to={`/about/`}
-    css={css`
-    float: right;
-`}>Więcej informacji</Link>
+   <>
+   <GlobalStyle/>
+  
+   {isMobile ? <MobileNavigation/> : <Navigation/>}
+   
 {children}
-</div>
+
+<Footer/>
+</>
+
 )
 }
