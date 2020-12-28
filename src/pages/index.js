@@ -4,7 +4,6 @@ import MainArticle from "../components/MainArticle/MainArticle"
 import Article from "../components/Article/Article"
 import { graphql } from 'gatsby';
 
-
 export const query = graphql`
 query{
   site{

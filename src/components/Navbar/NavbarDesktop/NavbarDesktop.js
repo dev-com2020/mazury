@@ -14,42 +14,35 @@ import {
 } from './NavbarDesktopStyle';
 
 const Navigation = () => {
-
-    return (
+    return(
         <><StyledWrapper>
-        <StyledUpBar>
-            <div>
-               <StyledUpBarLink to="/">Facebook</StyledUpBarLink>
-               <StyledUpBarLink to="/">Twitter</StyledUpBarLink>
-               <StyledUpBarLink to="/">Youtube</StyledUpBarLink>
-
-            </div>
-            <div>
-            <StyledUpBarLink to="/"><img src={Telephone}/>+48 535 535 535</StyledUpBarLink>
-            <StyledUpBarLink to="/"><img src={Email}/>emailjeziora@gmail.com</StyledUpBarLink>
-            </div>
-        </StyledUpBar>
-        </StyledWrapper>
-            <StyledNav>
-            <StyledListDiv>
+            <StyledUpBar>
+                <div>
+                    <StyledUpBarLink to="/">Facebook</StyledUpBarLink>
+                    <StyledUpBarLink to="/">Twitter</StyledUpBarLink>
+                    <StyledUpBarLink to="/">Youtube</StyledUpBarLink>
+                </div>
+                <div>
+                    <StyledUpBarLink to="/"><img src={Telephone}/>+48 555 555 555</StyledUpBarLink>
+                    
+                    <StyledUpBarLink to="/"><img src={Email}/>emailjeziora@gmail.com</StyledUpBarLink>
+                </div>
+                </StyledUpBar>
+                </StyledWrapper>
+                <StyledNav>
+                <StyledListDiv>
+                    
                         <img src={Logo}/>
-                        <h2>happenz</h2>
+                        <h2>blog</h2>
                         </StyledListDiv>
-                <StyledList>
-                
-                    <StyledItem>
-                        <StyledLink
-                            to='/'
-                            activeClassName="active"
-                        >O nas</StyledLink>
-                    </StyledItem>
-                    <StyledItem>
-                        <StyledLink
-                            to='/galeria'
-                            activeClassName="active"
-                        >Galeria</StyledLink>
-                    </StyledItem>
-                    <StyledItem>
+                        <StyledList>
+                            <StyledItem>
+                                <StyledLink to="/" activeClassName="active">O nas</StyledLink>
+                            </StyledItem>
+                            <StyledItem>
+                                <StyledLink to="/" activeClassName="active">Galeria</StyledLink>
+                            </StyledItem>
+                            <StyledItem>
                         <StyledLink
                             to='/ciekawostki'
                             activeClassName="active"

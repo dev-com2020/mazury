@@ -188,7 +188,7 @@ letter-spacing: -0.3px;
 font-family: 'Jost', sans-serif;
 font-style: normal;
 font-weight: normal;
-font-size: 15px;
+font-size: 9px;
 text-decoration: none;
 display: flex;
 margin: 0 auto;

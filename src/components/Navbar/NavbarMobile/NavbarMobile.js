@@ -51,7 +51,7 @@ const MobileNavigation = () => {
     </Navigation>
     <LogoDiv>
     <img src={Logo}/>
-    <h2>happenz</h2>
+    <h2>blog</h2>
     </LogoDiv>
     </>
   )

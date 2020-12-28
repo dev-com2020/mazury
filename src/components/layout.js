@@ -1,15 +1,9 @@
-import React,{useState, useEffect} from "react"
-import { css } from "@emotion/core"
-import { Link } from "gatsby"
-import { rhythm } from "../utils/typography"
+import React, {UseState, useEffect, useState} from 'react'
 import Footer from "./Footer/Footer"
 import Navigation from "./Navbar/NavbarDesktop/NavbarDesktop"
 import MobileNavigation from "./Navbar/NavbarMobile/NavbarMobile"
 import { useStaticQuery, graphql } from "gatsby"
 import GlobalStyle from "../assets/styles/globalStyles"
-
-
-
 
 export default ({ children }) =>{
     const data = useStaticQuery(
@@ -22,25 +16,21 @@ export default ({ children }) =>{
             }
         }`
     )
-    const [isMobile,setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     useEffect(()=>{
         if (window.innerWidth<1033) setIsMobile(true);
         function handleResize(){
             if (window.innerWidth<1033) setIsMobile(true);
             else setIsMobile(false);
         }
-        window.addEventListener("resize",handleResize);
+        window.addEventListener("resize", handleResize)
     })
-return (
-   <>
-   <GlobalStyle/>
-  
-   {isMobile ? <MobileNavigation/> : <Navigation/>}
-   
-{children}
-
-<Footer/>
-</>
-
-)
+    return (
+        <>
+        <GlobalStyle/>
+        { isMobile ? <MobileNavigation/> : <Navigation/>}
+        { children }
+        <Footer/>
+        </>
+    )
 }
