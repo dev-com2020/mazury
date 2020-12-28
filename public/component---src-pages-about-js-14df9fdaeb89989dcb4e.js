@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"3XHS":function(t,a,e){"use strict";e.r(a),e.d(a,"query",(function(){return u}));e("q1tI");var n=e("Bl7J"),r=e("qKvR");a.default=function(t){var a=t.data;return Object(r.a)(n.a,null,Object(r.a)("h1",null,a.site.siteMetadata.title),Object(r.a)("p",null,"10 rzeczy, których prawdopodobnie nie wiesz o Mazurach"))};var u="3159585216"}}]);
+//# sourceMappingURL=component---src-pages-about-js-14df9fdaeb89989dcb4e.js.map
